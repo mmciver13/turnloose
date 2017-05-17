@@ -1,4 +1,4 @@
-<!-- /templates/article.liquid -->
+<!-- /templates/article.liquidd -->
 
 {% assign number_of_comments = article.comments_count %}
 
@@ -9,7 +9,7 @@
   {% assign number_of_comments = article.comments_count | plus: 1 %}
 {% endif %}
 
-{% if article.image %}      
+{% if article.image %}
   <div class="blog__article-image" style="background-image: url('{{ article.image | img_url: '2048x2048' }}');">
   </div>
 {% endif %}
@@ -201,7 +201,7 @@
     </article>
     {% if settings.blog_sidebar_enable %}
     <div class="grid__item large--one-third blog__sidebar">
-      <h2 class="uppercase h4">{{ blog.title }}</h2>      
+      <h2 class="uppercase h4">{{ blog.title }}</h2>
       <a class="icon-fallback-text blog__rss" href="{{ blog.url }}.atom" title="{{ shop.name }} RSS" target="_blank">
         <span class="icon icon-rss"></span>
         <span class="fallback-text">RSS</span>
