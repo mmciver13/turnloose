@@ -36,6 +36,36 @@ $base-md: 1024px;
 // typography
 // ____________________
 
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin fadein($duration) {
+  -webkit-animation: fadein $duration 1;
+  -moz-animation:    fadein $duration 1;
+  -o-animation:      fadein $duration 1;
+  animation:         fadein $duration 1;
+}
+
+.fadein-1 {
+  @include fadein(.45s);
+}
+.fadein-2 {
+  @include fadein(.75s);
+}
+.fadein-3 {
+  @include fadein(1.25s);
+}
+
+// ____________________
+// typography
+// ____________________
+
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,800');
 
@@ -250,7 +280,6 @@ body {
        bottom:0;
        background-color:rgba($clr-black,.45);
        transition:all .45s ease;
-       z-index:50;
      }
      &:hover {
        .tl-box-cover {
@@ -266,7 +295,6 @@ body {
        left:0;
        right:0;
        top:50%;
-       z-index:100;
        transform:translateY(-50%);
        color:$clr-white;
        text-decoration:none !important;
@@ -275,6 +303,57 @@ body {
        text-align:center;
        display:block;
      }
+   }
+ }
+
+ // ____________________
+ // hero
+ // ____________________
+
+$hero-size: 60vh;
+
+ .tl-hero {
+   max-width: 100%;
+   min-height:$hero-size;
+   color:$clr-white;
+   position:relative;
+   background-attachment:fixed;
+   .content {
+     position:absolute;
+     top:50%;
+     transform:translateY(-50%);
+     left:0;
+     right:0;
+     text-align:center;
+     display:block;
+     h1 {
+       font-family:$fnt-body;
+       font-weight:800;
+       font-size:$sz-font-base*3;
+       line-height:($sz-font-base*3)+5px;
+       text-transform:uppercase;
+       margin:0;
+     }
+     .tl-hero-subhead {
+       font-size:$sz-font-base;
+       line-height:$sz-font-base+5px;
+       font-weight:normal;
+       letter-spacing:3px;
+     }
+   }
+   .tl-hero-cover {
+     position:absolute;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     background-color:rgba($clr-black,.25);
+   }
+   .tl-down-arrow {
+     position:absolute;
+     bottom:$sz-base*2;
+     left:50%;
+     transform:translateX(-50%);
    }
  }
 
@@ -325,4 +404,12 @@ body {
     position: relative;
     margin-left: 0 auto;
   }
+}
+
+// ###################################
+// overrides (sorry mom)
+// ###################################
+
+.nav-link, .cart-text-link {
+  font-weight:normal;
 }
