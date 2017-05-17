@@ -1,19 +1,22 @@
 {% paginate collection.products by 50 %}
 
-{% if collection.image %}<div class="collection-image" style="background-image: url('{{ collection.image | img_url: '2048x2048' }}');"> {% endif %}
-  <div class="collection-title text-center">
-    <div class="grid">
-      <h1 class="collection-text--headline title grid__item one-whole">{{ collection.title }}</h1>
-      {% if collection.description.size > 0 %}
-      <div class="collection-text--body text-center rte grid__item large--three-fifths push--large--one-fifth">
-        <p class="h4--body">{{ collection.description }}</p>
-      </div>
-      {% endif %}
+<header class="row row-fullwidth tl-hero fadein-1" style="background-image:url('{{ collection.image | img_url: '2048x2048' }}');background-repeat:no-repeat;background-size:cover;">
+  <div class="tl-hero-cover">
+  </div>
+  <div class="tl-down-arrow">
+    <img src="{{ 'down-arrow.svg' | asset_url }}" />
+  </div>
+  <div class="row">
+    <div class="col-full content">
+      <h1 class="fadein-3">
+        {{ collection.title }}
+      </h1>
+      <span class="tl-hero-subhead fadein-2">
+        {{ collection.description }}
+      </span>
     </div>
   </div>
-  {% if collection.image %}<div class="collection-image-overlay"></div>
-</div>
-{% endif %}
+</header>
 
 <div class="wrapper">
   {% if settings.collection_sorting %}
