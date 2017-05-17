@@ -1,0 +1,109 @@
+//          /\
+//         /  \
+//    \     \/     /
+//     \ /\ /\ /\ /
+//     /\  /\/\  /\
+//    /  \/    \/  \
+// ____________________
+//
+//       lmnts
+//  laxaltandmciver.co
+// ____________________
+
+// ____________________
+// palette
+// ____________________
+
+$clr-gold: #D9B073;
+$clr-cool-grey: #9B9EA0;
+$clr-navy: #004461;
+$clr-black: #000;
+$clr-white: #fff;
+
+// ____________________
+// sizing
+// ____________________
+
+$sz-max-width:1280px;
+$sz-font-base:24px;
+$sz-base:15px;
+
+// ____________________
+// typography
+// ____________________
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$fnt-header:"Nunito","Helvetica Neue",sans-serif;
+$fnt-body:"Montserrat","Helvetica Neue",Arial,sans-serif;
+
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family:$fnt-header;
+}
+
+body {
+  font-family:$fnt-body;
+  color:$clr-black;
+}
+
+// ____________________
+// normalize
+// ____________________
+
+* {
+  padding:0; // self explanatory
+  margin:0; // self explanatory
+  box-sizing:border-box; // include margin and padding when sizing width: & height:
+  border:none; // remove default outlines from <img> tags wrapped with <a>
+  outline:none; // remove outlines from forms on chrome
+}
+
+// ____________________
+// about page css
+// ____________________
+
+.about-wrapper {
+  background-image: url("{{ 'topo-bg.png' | asset_url }}");
+  width:100%;
+  max-width: 100%;
+  .float {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: -40px;
+  }
+  p {
+    font-family: Montserrat;
+    font-size: 24px;
+    letter-spacing: 10;
+    line-height: 59px;
+    text-align: center;
+    color: #95989A;
+    font-weight: 300;
+  }
+
+  .body {
+    position: relative;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+
+  .hero {
+    max-width: 100%;
+  }
+
+  .bg-row {
+    max-width: 100%;
+    text-align: center;
+    height:600px;
+  }
+
+  .img {
+    position: relative;
+    margin-left: 0 auto;
+  }
+}
