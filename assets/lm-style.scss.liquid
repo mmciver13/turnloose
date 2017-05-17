@@ -66,7 +66,7 @@ $base-md: 1024px;
 // typography
 // ____________________
 
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,900');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,800');
 
 $fnt-header:"Nunito","Helvetica Neue",sans-serif;
@@ -356,6 +356,25 @@ $hero-size: 60vh;
    }
  }
 
+ // ____________________
+ // article
+ // ____________________
+
+ .tl-article {
+   padding:$sz-base*4 $sz-base*2;
+   h1 {
+     text-transform:none;
+     font-weight:900;
+     font-family:$fnt-header;
+     font-size:$sz-font-base*2;
+   }
+   h2, h3, h4, h5, h6 {
+     font-weight:900;
+     font-family:$fnt-header;
+   }
+ }
+
+
 // ____________________
 // about page css
 // ____________________
@@ -411,4 +430,8 @@ $hero-size: 60vh;
 
 .nav-link, .cart-text-link {
   font-weight:normal;
+}
+
+.main-content {
+  padding-bottom:0;
 }
