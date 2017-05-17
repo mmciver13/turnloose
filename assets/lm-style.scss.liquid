@@ -51,11 +51,15 @@ body {
   color:$clr-black;
 }
 
+* {
+  box-sizing:border-box;
+}
+
 // ____________________
 // rows
 // ____________________
 
-  $max-width:990px;
+  $max-width:1280px;
 
  .row {
    width:100%;
@@ -155,9 +159,12 @@ body {
 
  .tl-footer {
    background-color:$clr-black;
-   padding:$sz-base*5 $sz-base*2;
+   padding:$sz-base*5 $sz-base*8;
    color:$clr-white;
    min-height:$sz-footer;
+   @media (max-width:$base-sm) {
+     padding:$sz-base*3 $sz-base*2 $sz-base $sz-base*2;
+   }
    .content {
      min-height:$sz-footer;
      position:relative;
@@ -170,10 +177,15 @@ body {
      color:$clr-white;
      text-transform:uppercase;
      font-size:$sz-font-base;
+     line-height:$sz-font-base*1.2;
+     letter-spacing:2px;
    }
    .tl-foot-collections {
      font-weight:800;
      margin:0;
+   }
+   .tl-foot-nav {
+     font-weight:300;
    }
    .tl-foot-sep {
      display:inline-block;
@@ -188,8 +200,12 @@ body {
      background:url("{{ 'foot-logo.png' | asset_url }}");
      background-size:contain;
      background-repeat:no-repeat;
+     background-position:right center;
      height:$sz-footer;
      opacity:.35;
+     @media (max-width:$base-sm) {
+       background-position:center center;
+     }
    }
    .tl-foot-social {
      position:absolute;
@@ -204,6 +220,60 @@ body {
          margin-right:$sz-base*2;
          text-transform:uppercase;
        }
+     }
+   }
+ }
+
+ // ____________________
+ // collection boxes
+ // ____________________
+
+ $box-height:40vh;
+ $box-padding:$sz-base/2;
+
+ .tl-hero-featured-row {
+   padding:$box-padding;
+   box-sizing:border-box !important;
+   .tl-box-container {
+     padding:$box-padding;
+   }
+   .tl-collection-box {
+     height:$box-height;
+     overflow:hidden;
+     position:relative;
+     text-align:center;
+     .tl-box-cover {
+       position:absolute;
+       top:0;
+       left:0;
+       right:0;
+       bottom:0;
+       background-color:rgba($clr-black,.45);
+       transition:all .45s ease;
+       z-index:50;
+     }
+     &:hover {
+       .tl-box-cover {
+       background-color:rgba($clr-black,1);
+       top:0;
+       left:0;
+       right:0;
+       bottom:0;
+      }
+     }
+     .tl-box-name {
+       position:absolute;
+       left:0;
+       right:0;
+       top:50%;
+       z-index:100;
+       transform:translateY(-50%);
+       color:$clr-white;
+       text-decoration:none !important;
+       font-family:$fnt-body;
+       font-weight:bold;
+       text-align:center;
+       display:block;
      }
    }
  }

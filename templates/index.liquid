@@ -1,21 +1,43 @@
-{% if settings.home_section_1 != blank %}
-  {% include settings.home_section_1 %}
-{% endif %}
-{% if settings.home_section_2 != blank %}
-  {% include settings.home_section_2 %}
-{% endif %}
-{% if settings.home_section_3 != blank %}
-  {% include settings.home_section_3 %}
-{% endif %}
-{% if settings.home_section_4 != blank %}
-  {% include settings.home_section_4 %}
-{% endif %}
-{% if settings.home_section_5 != blank %}
-  {% include settings.home_section_5 %}
-{% endif %}
-{% if settings.home_section_6 != blank %}
-  {% include settings.home_section_6 %}
-{% endif %}
-{% if settings.home_section_7 != blank %}
-  {% include settings.home_section_7 %}
-{% endif %}
+  <div class="row row-fullwidth tl-hero-featured-row">
+    <!-- todo:home page featured collections -->
+    {% for collection in collections limit:3 %}
+    <a href="{{ collection.url }}">
+      <div class="col-third tl-box-container">
+        <div class="tl-collection-box" style="background-image:url('{{ collection | img_url: 'large' }}');background-repeat:no-repeat;background-size:cover;">
+          <h1 class="tl-box-name">
+             {{ collection.title }}
+          </h1>
+          <div class="tl-box-cover">
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+    <!-- /todo:home page featured -->
+
+    <!-- todo:home page featured boxes -->
+    <a href="#">
+      <div class="col-half tl-box-container">
+        <div class="tl-collection-box" style="background-image:url('{{ 'featured-1.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;">
+          <h1 class="tl-box-name">
+            Featured 1
+          </h1>
+          <div class="tl-box-cover">
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="col-half tl-box-container">
+        <div class="tl-collection-box" style="background-image:url('{{ 'featured-2.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;">
+          <h1 class="tl-box-name">
+            Featured 2
+          </h1>
+          <div class="tl-box-cover">
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- /todo:home page featured boxes -->
+
+  </div>
