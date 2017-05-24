@@ -34,7 +34,7 @@ $base-sm: 676px;
 $base-md: 1024px;
 
 // ____________________
-// typography
+// animation
 // ____________________
 
 @keyframes fadein {
@@ -86,6 +86,21 @@ body {
   box-sizing:border-box;
 }
 
+.tl-subhead {
+  font-family:$fnt-header;
+  text-transform:uppercase;
+  line-height:43px;
+  font-size:40px;
+  color:lighten($clr-black,50%);
+  font-weight:500;
+  text-align:center;
+  margin:$sz-base*2 0;
+  @media (max-width:$base-sm) {
+    font-size:33px;
+    font-size:30px;
+  }
+}
+
 // ____________________
 // rows
 // ____________________
@@ -107,11 +122,23 @@ body {
    max-width:100%;
  }
 
+ .tl-three-quarter-width {
+   width:100%;
+   max-width:($max-width)*.75;
+   margin:0 auto;
+   padding:0 $sz-base;
+   &:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+ }
+
  .row-half {
    width:50%;
    float:left;
    display:inline-block;
-   @media (max-width:676px) {
+   @media (max-width:$base-sm) {
      width:100%;
      display:block;
      float:none;
@@ -129,6 +156,13 @@ body {
    }
  }
 
+ .row-clr-snow {
+   background-color:$clr-snow;
+ }
+
+ .row-tl-bump {
+   padding:$sz-base*3 $sz-base*2;
+ }
  // ____________________
  // columns
  // ____________________
@@ -382,6 +416,7 @@ $hero-size: 60vh;
  }
 
  .tl-product-hero {
+   padding-top:$sz-base;
    background-color:$clr-snow;
    img {
     max-width: 100vw;
@@ -389,7 +424,7 @@ $hero-size: 60vh;
     width:auto;
     max-height:60vh;
   }
- }
+}
 
  // ____________________
  // article
@@ -409,6 +444,135 @@ $hero-size: 60vh;
    }
  }
 
+ // ____________________
+ // checkout options
+ // ____________________
+
+
+  .tl-product-desc {
+    text-align:center;
+    padding-top:$sz-base*4;
+    padding-left:$sz-base*2;
+    padding-right:$sz-base*2;
+    padding-bottom:$sz-base*2;
+    h1 {
+      font-family:$fnt-body;
+      font-weight:600;
+      color:$clr-black;
+      font-size:60px;
+      line-height:65px;
+      margin:0 0 $sz-base*2.5 0;
+    }
+    h2 {
+      font-family:$fnt-header;
+      font-weight:200;
+      color:$clr-black;
+      font-size:50px;
+      line-height:52px;
+      margin-bottom: $sz-base*2.5;
+    }
+    p {
+      font-size:$sz-font-base;
+      font-weight:200;
+      font-family:$fnt-body;
+    }
+    @media (max-width:$base-sm) {
+      padding-left:$sz-base;
+      padding-right:$sz-base;
+      h1 {
+        margin:0 0 $sz-base 0;
+        font-size:40px;
+        line-height:45px;
+      }
+      h2 {
+        margin:0 0 $sz-base 0;
+        font-size:30px;
+        line-height:35px;
+      }
+      p {
+        font-size:$sz-font-base*.5;
+        font-size:$sz-font-base*.8;
+        font-weight:200;
+        font-family:$fnt-body;
+      }
+    }
+  }
+
+.tl-precheck {
+  padding:0;
+  form {
+    margin:0;
+  }
+  input, select {
+    border:2px solid $clr-black;
+    margin:0 auto $sz-base auto;
+    font-weight:bold;
+    font-family:$fnt-body;
+    font-size:16px;
+    padding: 17px;
+    line-height:30px;
+    max-width: 280px;
+    text-align:center;
+  }
+  .tl-add-to-cart {
+    margin-top:$sz-base*2;
+    width:100%;
+    button {
+      display:block;
+      border:none;
+      outline:none;
+      background-color:$clr-gold;
+      width:100%;
+      padding:$sz-base*3 $sz-base;
+      font-weight:600;
+      font-family:$fnt-body;
+      color:$clr-white;
+      font-size:40px;
+      line-height:45px;
+      text-transform:uppercase;
+      transition:all .5s ease;
+      &:hover {
+        background-color:lighten($clr-gold,10%);
+      }
+      @media (max-width:676px) {
+        font-size:28px;
+        line-height:30px;
+      }
+    }
+  }
+  .tl-quantity-selector {
+    text-align:center;
+    padding-bottom:$sz-base*3;
+    .js-qty {
+      margin:0 auto;
+      max-width: 280px;
+    }
+  }
+}
+
+// ____________________
+// grid item
+// ____________________
+
+$card-height:275px;
+
+.tl-grid {
+  margin:0;
+}
+
+.tl-grid-item {
+  padding:$sz-base;
+  margin:0;
+  position:relative;
+  min-height:$card-height;
+  .tl-grid-wrap {
+    padding:10px;
+    background-color:$clr-white;
+    .name_wrapper {
+      min-height:40px;
+    }
+  }
+}
 
 // ____________________
 // about page css
