@@ -1,26 +1,31 @@
 <!-- /snippets/product.liquid -->
 
 <div itemscope itemtype="http://schema.org/Product" class="product-page">
-  <div class="wrapper">
 
-    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
-    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
-    <meta itemprop="price" content="{{ product.price | money }}">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+  <meta itemprop="price" content="{{ product.price | money }}">
 
-    {% if settings.product_breadcrumbs %}
-      {% include 'breadcrumb' %}
-    {% endif %}
+  <header class="row row-fullwidth tl-hero tl-product-hero fadein-1">
 
-    <div class="grid product-single">
-      <div class="grid__item large--two-thirds text-center product-single__wrapper">
-        <div class="product-single__photos" id="ProductPhoto">
-          {% for image in product.images %}
-            <div class="product-single__photo__wrapper">
-              <img src="{{ image.src | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}" >
-            </div>
-          {% endfor %}
-        </div>
+    <div class="tl-product-img fadein-3">
+      <div class="product-single__photos" id="ProductPhoto">
+        {% for image in product.images %}
+          <div class="product-single__photo__wrapper">
+            <img src="{{ image.src | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}" >
+          </div>
+        {% endfor %}
       </div>
+    </div>
+
+  </header>
+
+</div>
+
+<!-- ---------------------------------- -->
+
+<div itemscope itemtype="http://schema.org/Product" class="product-page">
+  <div class="wrapper">
 
       <div class="grid__item large--one-third" id="productInfo">
         <div class="text-center">
@@ -40,10 +45,10 @@
           <h2 itemprop="name">{{ product.title }}</h2>
 
           {% comment %}
-            If the product description is over 1000 characters or contains an embed code, 
+            If the product description is over 1000 characters or contains an embed code,
             place the description in a full width container below the image and cart button.
           {% endcomment %}
-            
+
           {% assign description_position = settings.description_position %}
 
           {% if description_position == 'auto' %}
