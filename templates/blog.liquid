@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <!-- todo:blog page hero config -->
-<header class="row row-fullwidth tl-hero fadein-1" style="background-image:url('{{ 'featured-2.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;">
+<header class="row row-fullwidth tl-hero fadein-1" style="background-image:url('{{ 'featured-2.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
   <div class="tl-hero-cover">
   </div>
   <div class="tl-down-arrow">
@@ -29,7 +29,7 @@
   {% for article in blog.articles %}
   <a href="{{ article.url }}">
     <div class="col-third tl-box-container">
-      <div class="tl-collection-box fadein-1" style="background-image:url('{{ article.image | img_url: '1024x1024' }}');background-repeat:no-repeat;background-size:cover;">
+      <div class="tl-collection-box fadein-1" style="background-image:url('{{ article.image | img_url: '1024x1024' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
         <div class="tl-box-cover">
         </div>
         <div class="tl-box-content">

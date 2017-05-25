@@ -601,7 +601,6 @@ $class-type: unquote(".");
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: -$gridGutter;
 }
 
 #{$class-type}grid__item {
@@ -3165,174 +3164,174 @@ $double-xl: 1120px;
 }
 .grid__image {
   display: block;
-  img {
-    max-height: 100%;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+  // img {
+  //   max-height: 100%;
+  //   position: relative;
+  //   top: 50%;
+  //   -webkit-transform: translateY(-50%);
+  //   -ms-transform: translateY(-50%);
+  //   transform: translateY(-50%);
+  // }
 }
-.lt-ie9 .grid__image img,
-.ie9 .grid__image img{
-  top: 0;
-}
-
-/* Small */
-@include at-query($max, $small) {
-  .small--one-whole
-  .medium--one-whole,
-  .medium--one-half,
-  .medium--one-third,
-  .medium--one-quarter,
-  .medium--one-fifth,
-  .medium--one-sixth,
-  .large--one-whole,
-  .large--one-half,
-  .large--one-third,
-  .large--one-quarter,
-  .large--one-fifth,
-  .large--one-sixth,
-  .one-whole,
-  .one-half,
-  .one-third,
-  .one-quarter,
-  .one-fifth,
-  .one-sixth{
-    .grid__image{ height: $small/2; }
-  }
-  .small--one-whole .grid__image{
-    height: $small - $gutter;
-  }
-  .small--one-half .grid__image{
-    height: ($small - (2 *  $gutter) ) / 2;
-  }
-  .small--one-third .grid__image{
-    height: ($small - (3 *  $gutter) ) / 3;
-  }
-  .small--one-quarter .grid__image{
-    height: ($small - (4 *  $gutter) ) / 4;
-  }
-  .small--one-fifth .grid__image{
-    height: ($small - (5 *  $gutter) ) / 5;
-  }
-  .small--one-sixth .grid__image{
-    height: ($small - (6 *  $gutter) ) / 6;
-  }
-}
-
-/* Medium */
-@media only screen and (min-width: ($small + 1px) ) and (max-width: ($medium) ){
-  .medium--one-whole .grid__image,
-          .one-whole .grid__image{
-    height: $small - $gutter;
-  }
-  .medium--one-half .grid__image,
-          .one-half .grid__image {
-    height: ($small - (2 *  $gutter) ) / 2;
-  }
-  .medium--one-third .grid__image,
-          .one-third .grid__image {
-    height: ($small - (3 *  $gutter) ) / 3;
-  }
-  .medium--one-quarter .grid__image,
-          .one-quarter .grid__image {
-    height: ($small - (4 *  $gutter) ) / 4;
-  }
-  .medium--one-fifth .grid__image,
-          .one-fifth .grid__image {
-    height: ($small - (5 *  $gutter) ) / 5;
-  }
-  .medium--one-sixth .grid__image,
-          .one-sixth .grid__image {
-    height: ($small - (6 *  $gutter) ) / 6;
-  }
-}
-
-/* Large */
-@media only screen and (min-width: ($medium + 1px) ) and (max-width: ($xl) ){
-  .large--one-whole .grid__image,
-          .one-whole .grid__image {
-    height: $medium - $gutter;
-  }
-  .large--one-half .grid__image,
-         .one-half .grid__image {
-    height: ($medium - (2 *  $gutter) ) / 2;
-  }
-  .large--one-third .grid__image,
-         .one-third .grid__image {
-    height: ($medium - (3 *  $gutter) ) / 3;
-  }
-  .large--one-quarter .grid__image,
-         .one-quarter .grid__image {
-    height: ($medium - (4 *  $gutter) ) / 4;
-  }
-  .large--one-fifth .grid__image,
-         .one-fifth .grid__image {
-    height: ($medium - (5 *  $gutter) ) / 5;
-  }
-  .large--one-sixth .grid__image,
-         .one-sixth .grid__image {
-    height: ($medium - (6 *  $gutter) ) / 6;
-  }
-}
-
-/* XL */
-@include at-query($min, $xl) {
-  .large--one-whole .grid__image,
-          .one-whole .grid__image {
-    height: $xl - $gutter;
-  }
-  .large--one-half .grid__image,
-         .one-half .grid__image {
-    height: ($xl - (2 *  $gutter) ) / 2;
-  }
-  .large--one-third .grid__image,
-         .one-third .grid__image {
-    height: ($xl - (3 *  $gutter) ) / 3;
-  }
-  .large--one-quarter .grid__image,
-         .one-quarter .grid__image {
-    height: ($xl - (4 *  $gutter) ) / 4;
-  }
-  .large--one-fifth .grid__image,
-         .one-fifth .grid__image {
-    height: ($xl - (5 *  $gutter) ) / 5;
-  }
-  .large--one-sixth .grid__image,
-         .one-sixth .grid__image {
-    height: ($xl - (6 *  $gutter) ) / 6;
-  }
-}
-
-/* Double XL */
-@include at-query($min, $double-xl) {
-  .large--one-whole .grid__image,
-          .one-whole .grid__image {
-    height: $double-xl - $gutter;
-  }
-  .large--one-half .grid__image,
-         .one-half .grid__image {
-    height: ($double-xl - (2 *  $gutter) ) / 2;
-  }
-  .large--one-third .grid__image,
-         .one-third .grid__image {
-    height: ($double-xl - (3 *  $gutter) ) / 3;
-  }
-  .large--one-quarter .grid__image,
-         .one-quarter .grid__image {
-    height: ($double-xl - (4 *  $gutter) ) / 4;
-  }
-  .large--one-fifth .grid__image,
-         .one-fifth .grid__image {
-    height: ($double-xl - (5 *  $gutter) ) / 5;
-  }
-  .large--one-sixth .grid__image,
-         .one-sixth .grid__image {
-    height: ($double-xl - (6 *  $gutter) ) / 6;
-  }
-}
+// .lt-ie9 .grid__image img,
+// .ie9 .grid__image img{
+//   top: 0;
+// }
+//
+// /* Small */
+// @include at-query($max, $small) {
+//   .small--one-whole
+//   .medium--one-whole,
+//   .medium--one-half,
+//   .medium--one-third,
+//   .medium--one-quarter,
+//   .medium--one-fifth,
+//   .medium--one-sixth,
+//   .large--one-whole,
+//   .large--one-half,
+//   .large--one-third,
+//   .large--one-quarter,
+//   .large--one-fifth,
+//   .large--one-sixth,
+//   .one-whole,
+//   .one-half,
+//   .one-third,
+//   .one-quarter,
+//   .one-fifth,
+//   .one-sixth{
+//     .grid__image{ height: $small/2; }
+//   }
+//   .small--one-whole .grid__image{
+//     height: $small - $gutter;
+//   }
+//   .small--one-half .grid__image{
+//     height: ($small - (2 *  $gutter) ) / 2;
+//   }
+//   .small--one-third .grid__image{
+//     height: ($small - (3 *  $gutter) ) / 3;
+//   }
+//   .small--one-quarter .grid__image{
+//     height: ($small - (4 *  $gutter) ) / 4;
+//   }
+//   .small--one-fifth .grid__image{
+//     height: ($small - (5 *  $gutter) ) / 5;
+//   }
+//   .small--one-sixth .grid__image{
+//     height: ($small - (6 *  $gutter) ) / 6;
+//   }
+// }
+//
+// /* Medium */
+// @media only screen and (min-width: ($small + 1px) ) and (max-width: ($medium) ){
+//   .medium--one-whole .grid__image,
+//           .one-whole .grid__image{
+//     height: $small - $gutter;
+//   }
+//   .medium--one-half .grid__image,
+//           .one-half .grid__image {
+//     height: ($small - (2 *  $gutter) ) / 2;
+//   }
+//   .medium--one-third .grid__image,
+//           .one-third .grid__image {
+//     height: ($small - (3 *  $gutter) ) / 3;
+//   }
+//   .medium--one-quarter .grid__image,
+//           .one-quarter .grid__image {
+//     height: ($small - (4 *  $gutter) ) / 4;
+//   }
+//   .medium--one-fifth .grid__image,
+//           .one-fifth .grid__image {
+//     height: ($small - (5 *  $gutter) ) / 5;
+//   }
+//   .medium--one-sixth .grid__image,
+//           .one-sixth .grid__image {
+//     height: ($small - (6 *  $gutter) ) / 6;
+//   }
+// }
+//
+// /* Large */
+// @media only screen and (min-width: ($medium + 1px) ) and (max-width: ($xl) ){
+//   .large--one-whole .grid__image,
+//           .one-whole .grid__image {
+//     height: $medium - $gutter;
+//   }
+//   .large--one-half .grid__image,
+//          .one-half .grid__image {
+//     height: ($medium - (2 *  $gutter) ) / 2;
+//   }
+//   .large--one-third .grid__image,
+//          .one-third .grid__image {
+//     height: ($medium - (3 *  $gutter) ) / 3;
+//   }
+//   .large--one-quarter .grid__image,
+//          .one-quarter .grid__image {
+//     height: ($medium - (4 *  $gutter) ) / 4;
+//   }
+//   .large--one-fifth .grid__image,
+//          .one-fifth .grid__image {
+//     height: ($medium - (5 *  $gutter) ) / 5;
+//   }
+//   .large--one-sixth .grid__image,
+//          .one-sixth .grid__image {
+//     height: ($medium - (6 *  $gutter) ) / 6;
+//   }
+// }
+//
+// /* XL */
+// @include at-query($min, $xl) {
+//   .large--one-whole .grid__image,
+//           .one-whole .grid__image {
+//     height: $xl - $gutter;
+//   }
+//   .large--one-half .grid__image,
+//          .one-half .grid__image {
+//     height: ($xl - (2 *  $gutter) ) / 2;
+//   }
+//   .large--one-third .grid__image,
+//          .one-third .grid__image {
+//     height: ($xl - (3 *  $gutter) ) / 3;
+//   }
+//   .large--one-quarter .grid__image,
+//          .one-quarter .grid__image {
+//     height: ($xl - (4 *  $gutter) ) / 4;
+//   }
+//   .large--one-fifth .grid__image,
+//          .one-fifth .grid__image {
+//     height: ($xl - (5 *  $gutter) ) / 5;
+//   }
+//   .large--one-sixth .grid__image,
+//          .one-sixth .grid__image {
+//     height: ($xl - (6 *  $gutter) ) / 6;
+//   }
+// }
+//
+// /* Double XL */
+// @include at-query($min, $double-xl) {
+//   .large--one-whole .grid__image,
+//           .one-whole .grid__image {
+//     height: $double-xl - $gutter;
+//   }
+//   .large--one-half .grid__image,
+//          .one-half .grid__image {
+//     height: ($double-xl - (2 *  $gutter) ) / 2;
+//   }
+//   .large--one-third .grid__image,
+//          .one-third .grid__image {
+//     height: ($double-xl - (3 *  $gutter) ) / 3;
+//   }
+//   .large--one-quarter .grid__image,
+//          .one-quarter .grid__image {
+//     height: ($double-xl - (4 *  $gutter) ) / 4;
+//   }
+//   .large--one-fifth .grid__image,
+//          .one-fifth .grid__image {
+//     height: ($double-xl - (5 *  $gutter) ) / 5;
+//   }
+//   .large--one-sixth .grid__image,
+//          .one-sixth .grid__image {
+//     height: ($double-xl - (6 *  $gutter) ) / 6;
+//   }
+// }
 
 
 /*============================================================================
@@ -4288,6 +4287,7 @@ $slick-opacity-not-active: 0.75 !default;
 /* Dots */
 
 .slick-slider {
+  min-height:60vh;
   // padding-bottom: 20px;
 }
 
