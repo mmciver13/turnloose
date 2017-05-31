@@ -136,6 +136,67 @@
     ]
   },
   {
+    "name": "TL Home: Featured Images",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product Separator Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_break_img",
+        "label": "Image Between Product + Blog Posts"
+      }
+    ]
+  },
+  {
+    "name": "TL Home: Featured Promotion",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Featured Promotion"
+      },
+      {
+        "type": "text",
+        "id": "featured_promotion",
+        "label": "Promotion Title (leave blank if none)"
+      },
+      {
+        "type": "text",
+        "id": "featured_promotion_button",
+        "label": "Promotion Button Text"
+      },
+      {
+        "type": "text",
+        "id": "featured_promotion_url",
+        "label": "Promotion Link"
+      },
+      {
+        "type": "header",
+        "content": "Promotion Background"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_promotion_img",
+        "label": "Promotion Image"
+      },
+      {
+        "type": "color",
+        "id": "featured_promotion_color",
+        "label": "Overlay Color"
+      },
+      {
+        "type": "range",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 50,
+        "id": "featured_promotion_overlay",
+        "label": "Overlay Opacity"
+      }
+    ]
+  },
+  {
     "name": "Color",
     "settings": [
       {

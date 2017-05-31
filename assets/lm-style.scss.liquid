@@ -118,6 +118,12 @@ body {
    }
  }
 
+ .content {
+   img {
+     max-width:100%;
+   }
+ }
+
  .row-fullwidth {
    max-width:100%;
  }
@@ -171,6 +177,16 @@ body {
  .row-tl-bump {
    padding:$sz-base*3 $sz-base;
  }
+
+ .row-tl-bump-2x {
+   padding:$sz-base*8 $sz-base;
+ }
+
+ .row-tl-bump-bottom {
+   padding-bottom:$sz-base*6;
+ }
+
+
  // ____________________
  // columns
  // ____________________
@@ -318,6 +334,24 @@ body {
 
  $box-height:40vh;
  $box-padding:$sz-base/2;
+
+ .tl-promotion {
+   color:$clr-white;
+   h4 {
+     font-size:38px;
+     line-height:42px;
+     letter-spacing:2px;
+     margin:0;
+   }
+   .tl-promo-overlay {
+     position:absolute;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     opacity:{{ settings.featured_promotion_overlay }}*.01;
+   }
+ }
 
  .tl-hero-featured-row {
    padding:$box-padding;
@@ -601,6 +635,30 @@ $card-height:275px;
   }
 }
 
+.tl-hide-last {
+  @media (min-width:1024px) {
+    .tl-grid-item {
+      &:last-child {
+        display:block;
+      }
+    }
+  }
+  @media (max-width:769px) {
+    .tl-grid-item {
+      &:last-child {
+        display:none;
+      }
+    }
+  }
+  @media (max-width:676px) {
+    .tl-grid-item {
+      &:last-child {
+        display:block !important;
+      }
+    }
+  }
+}
+
 // ____________________
 // buttons
 // ____________________
@@ -624,6 +682,18 @@ $card-height:275px;
   transition: all .25s ease;
   &:hover {
     border:2px solid $clr-black;
+    background-color:rgba($clr-white,1);
+    color:$clr-black !important;
+  }
+}
+
+.tl-btn-white-outline {
+  background-color:rgba($clr-white,0);
+  border:2px solid $clr-white;
+  color:$clr-white;
+  text-decoration:none;
+  transition: all .25s ease;
+  &:hover {
     background-color:rgba($clr-white,1);
     color:$clr-black !important;
   }
