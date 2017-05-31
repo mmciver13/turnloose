@@ -17,6 +17,125 @@
     ]
   },
   {
+    "name": "TL Home: Featured Boxes",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Collection Box 1"
+      },
+      {
+        "type": "text",
+        "id": "featured_small_1_title",
+        "label": "Collection Box 1 Text",
+        "default": "Collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_small_1_img",
+        "label": "Collection Box 1 Image"
+      },
+      {
+        "type": "collection",
+        "id": "featured_small_1_link",
+        "label": "Collection Box 1 Link"
+      },
+      {
+        "type": "header",
+        "content": "Collection Box 2"
+      },
+      {
+        "type": "text",
+        "id": "featured_small_2_title",
+        "label": "Collection Box 2 Text",
+        "default": "Collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_small_2_img",
+        "label": "Collection Box 2 Image"
+      },
+      {
+        "type": "collection",
+        "id": "featured_small_2_link",
+        "label": "Collection Box 2 Link"
+      },
+      {
+        "type": "header",
+        "content": "Collection Box 3"
+      },
+      {
+        "type": "text",
+        "id": "featured_small_3_title",
+        "label": "Collection Box 3 Text",
+        "default": "Collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_small_3_img",
+        "label": "Collection Box 3 Image"
+      },
+      {
+        "type": "collection",
+        "id": "featured_small_3_link",
+        "label": "Collection Box 3 Link"
+      },
+      {
+        "type": "header",
+        "content": "Feature Box 1"
+      },
+      {
+        "type": "text",
+        "id": "featured_1_title",
+        "label": "Featured Box 1 Text",
+        "default": "Featured 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_1_img",
+        "label": "Featured Box 1 Image"
+      },
+      {
+        "type": "text",
+        "id": "featured_1_link",
+        "label": "Featured Box 1 Link"
+      },
+      {
+        "type": "header",
+        "content": "Feature Box 2"
+      },
+      {
+        "type": "text",
+        "id": "featured_2_title",
+        "label": "Featured Box 2 Text",
+        "default": "Featured 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_2_img",
+        "label": "Featured Box 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "featured_2_link",
+        "label": "Featured Box 2 Link"
+      }
+    ]
+  },
+  {
+    "name": "TL Home: Featured Products",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Featured Collection"
+      },
+      {
+        "type": "collection",
+        "id": "featured_collection_home",
+        "label": "Featured Collection"
+      }
+    ]
+  },
+  {
     "name": "Color",
     "settings": [
       {
@@ -757,739 +876,6 @@
         "type": "link_list",
         "id": "footer_secondary_linklist",
         "label": "Link List"
-      }
-    ]
-  },
-  {
-    "name": "Home page",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Sections"
-      },
-      {
-        "type": "paragraph",
-        "content": "Choose your home page sections and their order."
-      },
-      {
-        "type": "select",
-        "id": "home_section_1",
-        "options": [
-          {
-            "value": "",
-            "label": "(none)"
-          },
-          {
-            "value": "home-hero",
-            "label": "Banner"
-          },
-          {
-            "value": "home-page",
-            "label": "Featured content"
-          },
-          {
-            "value": "home-collection",
-            "label": "Featured products"
-          },
-          {
-            "value": "home-product",
-            "label": "Featured single product"
-          },
-          {
-            "value": "home-custom-section",
-            "label": "Parallax section"
-          },
-          {
-            "value": "home-blog",
-            "label": "Featured blog posts"
-          },
-          {
-            "value": "home-instagram",
-            "label": "Instagram feed"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "home_section_2",
-        "options": [
-          {
-            "value": "",
-            "label": "(none)"
-          },
-          {
-            "value": "home-hero",
-            "label": "Banner"
-          },
-          {
-            "value": "home-page",
-            "label": "Featured content"
-          },
-          {
-            "value": "home-collection",
-            "label": "Featured products"
-          },
-          {
-            "value": "home-product",
-            "label": "Featured single product"
-          },
-          {
-            "value": "home-custom-section",
-            "label": "Parallax section"
-          },
-          {
-            "value": "home-blog",
-            "label": "Featured blog posts"
-          },
-          {
-            "value": "home-instagram",
-            "label": "Instagram feed"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "home_section_3",
-        "options": [
-          {
-            "value": "",
-            "label": "(none)"
-          },
-          {
-            "value": "home-hero",
-            "label": "Banner"
-          },
-          {
-            "value": "home-page",
-            "label": "Featured content"
-          },
-          {
-            "value": "home-collection",
-            "label": "Featured products"
-          },
-          {
-            "value": "home-product",
-            "label": "Featured single product"
-          },
-          {
-            "value": "home-custom-section",
-            "label": "Parallax section"
-          },
-          {
-            "value": "home-blog",
-            "label": "Featured blog posts"
-          },
-          {
-            "value": "home-instagram",
-            "label": "Instagram feed"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "home_section_4",
-        "options": [
-          {
-            "value": "",
-            "label": "(none)"
-          },
-          {
-            "value": "home-hero",
-            "label": "Banner"
-          },
-          {
-            "value": "home-page",
-            "label": "Featured content"
-          },
-          {
-            "value": "home-collection",
-            "label": "Featured products"
-          },
-          {
-            "value": "home-product",
-            "label": "Featured single product"
-          },
-          {
-            "value": "home-custom-section",
-            "label": "Parallax section"
-          },
-          {
-            "value": "home-blog",
-            "label": "Featured blog posts"
-          },
-          {
-            "value": "home-instagram",
-            "label": "Instagram feed"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "home_section_5",
-        "options": [
-          {
-            "value": "",
-            "label": "(none)"
-          },
-          {
-            "value": "home-hero",
-            "label": "Banner"
-          },
-          {
-            "value": "home-page",
-            "label": "Featured content"
-          },
-          {
-            "value": "home-collection",
-            "label": "Featured products"
-          },
-          {
-            "value": "home-product",
-            "label": "Featured single product"
-          },
-          {
-            "value": "home-custom-section",
-            "label": "Parallax section"
-          },
-          {
-            "value": "home-blog",
-            "label": "Featured blog posts"
-          },
-          {
-            "value": "home-instagram",
-            "label": "Instagram feed"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "home_section_6",
-        "options": [
-          {
-            "value": "",
-            "label": "(none)"
-          },
-          {
-            "value": "home-hero",
-            "label": "Banner"
-          },
-          {
-            "value": "home-page",
-            "label": "Featured content"
-          },
-          {
-            "value": "home-collection",
-            "label": "Featured products"
-          },
-          {
-            "value": "home-product",
-            "label": "Featured single product"
-          },
-          {
-            "value": "home-custom-section",
-            "label": "Parallax section"
-          },
-          {
-            "value": "home-blog",
-            "label": "Featured blog posts"
-          },
-          {
-            "value": "home-instagram",
-            "label": "Instagram feed"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "home_section_7",
-        "options": [
-          {
-            "value": "",
-            "label": "(none)"
-          },
-          {
-            "value": "home-hero",
-            "label": "Banner"
-          },
-          {
-            "value": "home-page",
-            "label": "Featured content"
-          },
-          {
-            "value": "home-collection",
-            "label": "Featured products"
-          },
-          {
-            "value": "home-product",
-            "label": "Featured single product"
-          },
-          {
-            "value": "home-custom-section",
-            "label": "Parallax section"
-          },
-          {
-            "value": "home-blog",
-            "label": "Featured blog posts"
-          },
-          {
-            "value": "home-instagram",
-            "label": "Instagram feed"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "content": "Each section can only be used once on the home page."
-      }
-    ]
-  },
-  {
-    "name": "Home page - banner",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Banner image"
-      },
-      {
-        "type": "image",
-        "id": "homepage_hero_image.jpg",
-        "label": "Banner image",
-        "info": "1200 x 1200px .jpg recommended",
-        "max-width": 2800,
-        "max-height": 2800
-      },
-      {
-        "type": "select",
-        "id": "homepage_hero_height",
-        "label": "Height",
-        "options": [
-          {
-            "value": "80px",
-            "label": "Short"
-          },
-          {
-            "value": "160px",
-            "label": "Medium"
-          },
-          {
-            "value": "260px",
-            "label": "Tall"
-          },
-          {
-            "value": "300px",
-            "label": "Full page height"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "hero_overlay_opacity",
-        "label": "Image overlay opacity",
-        "info": "Used to darken image for legible text.",
-        "options": [
-          {
-            "value": "0",
-            "label": "0%"
-          },
-          {
-            "value": "0.05",
-            "label": "5%"
-          },
-          {
-            "value": "0.1",
-            "label": "10%"
-          },
-          {
-            "value": "0.15",
-            "label": "15%"
-          },
-          {
-            "value": "0.2",
-            "label": "20%"
-          },
-          {
-            "value": "0.25",
-            "label": "25%"
-          },
-          {
-            "value": "0.3",
-            "label": "30%"
-          },
-          {
-            "value": "0.35",
-            "label": "35%"
-          },
-          {
-            "value": "0.4",
-            "label": "40%"
-          },
-          {
-            "value": "0.45",
-            "label": "45%"
-          },
-          {
-            "value": "0.5",
-            "label": "50%"
-          },
-          {
-            "value": "0.55",
-            "label": "55%"
-          },
-          {
-            "value": "0.6",
-            "label": "60%"
-          },
-          {
-            "value": "0.65",
-            "label": "65%"
-          },
-          {
-            "value": "0.7",
-            "label": "70%"
-          },
-          {
-            "value": "0.75",
-            "label": "75%"
-          },
-          {
-            "value": "0.8",
-            "label": "80%"
-          },
-          {
-            "value": "0.85",
-            "label": "85%"
-          },
-          {
-            "value": "0.9",
-            "label": "90%"
-          },
-          {
-            "value": "0.95",
-            "label": "95%"
-          },
-          {
-            "value": "1",
-            "label": "100%"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Text"
-      },
-      {
-        "type": "text",
-        "id": "hero_headline",
-        "label": "Headline"
-      },
-      {
-        "type": "textarea",
-        "id": "hero_description",
-        "label": "Description"
-      },
-      {
-        "type": "select",
-        "id": "homepage_hero_align",
-        "options": [
-          {
-            "value": "text-left",
-            "label": "Align Left"
-          },
-          {
-            "value": "text-center",
-            "label": "Align Center"
-          },
-          {
-            "value": "text-right",
-            "label": "Align Right"
-          }
-        ],
-        "label": "Alignment"
-      },
-      {
-        "type": "header",
-        "content": "Button"
-      },
-      {
-        "type": "text",
-        "id": "hero_link_text",
-        "label": "Text",
-        "default": "View products"
-      },
-      {
-        "type": "text",
-        "id": "hero_link",
-        "label": "Link",
-        "default": "\/collections\/all",
-        "info": "Example: \/collections\/all"
-      },
-      {
-        "type": "header",
-        "content": "Button image (optional)"
-      },
-      {
-        "type": "checkbox",
-        "id": "homepage_hero_cta_image_enable",
-        "label": "Show clickable image instead of text and button.",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "homepage_hero_cta_image.png",
-        "label": "Button image",
-        "info": "1000 x 1000px .png max",
-        "max-width": 1000,
-        "max-height": 1000
-      },
-      {
-        "type": "header",
-        "content": "Feature video (optional)"
-      },
-      {
-        "type": "checkbox",
-        "id": "home_enable_video",
-        "label": "Play a Vimeo video when the button is pressed."
-      },
-      {
-        "type": "text",
-        "id": "homepage_video_vimeo_url",
-        "label": "Vimeo URL of feature video",
-        "info": "http:\/\/vimeo.com\/12345"
-      }
-    ]
-  },
-  {
-    "name": "Home page - featured products",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Featured products"
-      },
-      {
-        "type": "collection",
-        "id": "home_collection",
-        "label": "Choose collection"
-      },
-      {
-        "type": "select",
-        "id": "homepage_collection_color",
-        "label": "Background coloring",
-        "options": [
-          {
-            "value": "homepage--white",
-            "label": "White"
-          },
-          {
-            "value": "homepage--light",
-            "label": "Light"
-          },
-          {
-            "value": "homepage--splash",
-            "label": "Accent"
-          },
-          {
-            "value": "homepage--dark",
-            "label": "Dark"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "id": "homepage_collection_subtitle",
-        "label": "Secondary title"
-      }
-    ]
-  },
-  {
-    "name": "Home page - featured content",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Featured content"
-      },
-      {
-        "type": "page",
-        "id": "home_page_content",
-        "label": "Choose page"
-      },
-      {
-        "type": "select",
-        "id": "homepage_page_color",
-        "label": "Background coloring",
-        "options": [
-          {
-            "value": "homepage--white",
-            "label": "White"
-          },
-          {
-            "value": "homepage--light",
-            "label": "Light"
-          },
-          {
-            "value": "homepage--splash",
-            "label": "Accent"
-          },
-          {
-            "value": "homepage--dark",
-            "label": "Dark"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Home page - featured product",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Featured product"
-      },
-      {
-        "type": "product",
-        "id": "home_product",
-        "label": "Choose product"
-      },
-      {
-        "type": "text",
-        "id": "homepage_product_subtitle",
-        "label": "Secondary title"
-      },
-      {
-        "type": "select",
-        "id": "homepage_product_color",
-        "label": "Background coloring",
-        "options": [
-          {
-            "value": "homepage--white",
-            "label": "White"
-          },
-          {
-            "value": "homepage--light",
-            "label": "Light"
-          },
-          {
-            "value": "homepage--splash",
-            "label": "Accent"
-          },
-          {
-            "value": "homepage--dark",
-            "label": "Dark"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Home page - featured text",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Featured text"
-      },
-      {
-        "type": "text",
-        "label": "Write text",
-        "id": "homepage_lower_link_text"
-      },
-      {
-        "type": "image",
-        "id": "homepage_lower_image.jpg",
-        "label": "Background image",
-        "info": "1200 x 1200px .jpg recommended",
-        "max-width": 2800,
-        "max-height": 2000
-      },
-      {
-        "type": "text",
-        "id": "homepage_lower_link",
-        "label": "Link URL",
-        "info": "Example: \/collections\/all"
-      }
-    ]
-  },
-  {
-    "name": "Home page - featured blog",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Blog"
-      },
-      {
-        "type": "blog",
-        "id": "homepage_blog",
-        "label": "Choose blog",
-        "info": "Feature two recent posts from this blog."
-      },
-      {
-        "type": "text",
-        "id": "homepage_blog_subtitle",
-        "label": "Secondary title"
-      },
-      {
-        "type": "select",
-        "id": "homepage_blog_color",
-        "label": "Background coloring",
-        "options": [
-          {
-            "value": "homepage--white",
-            "label": "White"
-          },
-          {
-            "value": "homepage--light",
-            "label": "Light"
-          },
-          {
-            "value": "homepage--splash",
-            "label": "Accent"
-          },
-          {
-            "value": "homepage--dark",
-            "label": "Dark"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Home page - Instagram",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Instagram"
-      },
-      {
-        "type": "text",
-        "id": "homepage_instagram_subtitle",
-        "label": "Secondary title"
-      },
-      {
-        "type": "select",
-        "id": "homepage_instagram_color",
-        "label": "Background coloring",
-        "options": [
-          {
-            "value": "homepage--white",
-            "label": "White"
-          },
-          {
-            "value": "homepage--light",
-            "label": "Light"
-          },
-          {
-            "value": "homepage--splash",
-            "label": "Accent"
-          },
-          {
-            "value": "homepage--dark",
-            "label": "Dark"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "id": "instagram_id",
-        "label": "Instagram access token",
-        "info": "[Generate Instagram access token](http:\/\/corknine.com\/pipeline-docs\/instagram\/)"
       }
     ]
   },

@@ -1,42 +1,74 @@
   <div class="row row-fullwidth tl-hero-featured-row">
-    <!-- todo:home page featured collections -->
-    {% for collection in collections limit:3 %}
-    <a href="{{ collection.url }}">
+    <a href="{{ collections[settings.featured_small_1_link].url }}">
       <div class="col-third tl-box-container">
-        <div class="tl-collection-box fadein-1" style="background-image:url('{{ collection | img_url: 'large' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+        <div class="tl-collection-box fadein-1" style="background-image:url('{{ settings.featured_small_1_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
           <div class="tl-box-cover">
           </div>
           <h1 class="tl-box-name">
-             {{ collection.title }}
+             {{ settings.featured_small_1_title }}
           </h1>
         </div>
       </div>
     </a>
-    {% endfor %}
-    <!-- /todo:home page featured -->
+    <a href="{{ collections[settings.featured_small_2_link].url }}">
+      <div class="col-third tl-box-container">
+        <div class="tl-collection-box fadein-1" style="background-image:url('{{ settings.featured_small_2_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+          <div class="tl-box-cover">
+          </div>
+          <h1 class="tl-box-name">
+             {{ settings.featured_small_2_title }}
+          </h1>
+        </div>
+      </div>
+    </a>
+    <a href="{{ collections[settings.featured_small_3_link].url }}">
+      <div class="col-third tl-box-container">
+        <div class="tl-collection-box fadein-1" style="background-image:url('{{ settings.featured_small_3_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+          <div class="tl-box-cover">
+          </div>
+          <h1 class="tl-box-name">
+             {{ settings.featured_small_3_title }}
+          </h1>
+        </div>
+      </div>
+    </a>
+    <a href="{{ settings.featured_1_link }}">
+      <div class="col-half tl-box-container">
+        <div class="tl-collection-box fadein-2" style="background-image:url('{{ settings.featured_1_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+          <div class="tl-box-cover">
+          </div>
+          <h1 class="tl-box-name">
+            {{ settings.featured_1_title }}
+          </h1>
+        </div>
+      </div>
+    </a>
+    <a href="{{ settings.featured_2_link }}">
+      <div class="col-half tl-box-container">
+        <div class="tl-collection-box fadein-3" style="background-image:url('{{ settings.featured_2_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+          <div class="tl-box-cover">
+          </div>
+          <h1 class="tl-box-name">
+            {{ settings.featured_2_title }}
+          </h1>
+        </div>
+      </div>
+    </a>
+  </div>
 
-    <!-- todo:home page featured boxes -->
-    <a href="#">
-      <div class="col-half tl-box-container">
-        <div class="tl-collection-box fadein-2" style="background-image:url('{{ 'featured-1.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
-          <div class="tl-box-cover">
+  <div class="row row-fullwidth">
+    <div class="content col-full">
+
+
+      <div class="homepage-collection {{ settings.homepage_collection_color }}">
+        <div class="wrapper">
+          <div class="grid-uniform tl-grid">
+            {% for product in collections[settings.featured_collection_home].products limit: 4 %}
+              {% include 'product-grid-item' %}
+            {% endfor %}
           </div>
-          <h1 class="tl-box-name">
-            Featured 1
-          </h1>
         </div>
       </div>
-    </a>
-    <a href="#">
-      <div class="col-half tl-box-container">
-        <div class="tl-collection-box fadein-3" style="background-image:url('{{ 'featured-2.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
-          <div class="tl-box-cover">
-          </div>
-          <h1 class="tl-box-name">
-            Featured 2
-          </h1>
-        </div>
-      </div>
-    </a>
-    <!-- /todo:home page featured boxes -->
+
+    </div>
   </div>
