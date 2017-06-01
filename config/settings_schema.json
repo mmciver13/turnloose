@@ -197,6 +197,53 @@
     ]
   },
   {
+    "name": "TL Collections: Blog Promotion",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Collection Blog Promotion"
+      },
+      {
+        "type": "text",
+        "id": "collection_promotion",
+        "label": "Promotion Blog Title (leave blank if none)"
+      },
+      {
+        "type": "text",
+        "id": "collection_promotion_button",
+        "label": "Blog Promotion Button Text"
+      },
+      {
+        "type": "text",
+        "id": "collection_promotion_url",
+        "label": "Blog Promotion Link"
+      },
+      {
+        "type": "header",
+        "content": "Blog Promotion Background"
+      },
+      {
+        "type": "image_picker",
+        "id": "collection_promotion_img",
+        "label": "Blog Promotion Image"
+      },
+      {
+        "type": "color",
+        "id": "collection_promotion_color",
+        "label": "Overlay Color"
+      },
+      {
+        "type": "range",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 50,
+        "id": "collection_promotion_overlay",
+        "label": "Overlay Opacity"
+      }
+    ]
+  },
+  {
     "name": "Color",
     "settings": [
       {

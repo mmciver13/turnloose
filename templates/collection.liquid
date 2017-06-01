@@ -91,3 +91,16 @@
 </div>
 <!-- /single collection page -->
 {% endif %}
+
+<div class="row row-fullwidth row-tl-bump-2x tl-promotion" style="background-image:url('{{ settings.collection_promotion_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;">
+  <div class="tl-blog-promo-overlay" style="background-color:{{ settings.collection_promotion_color }};">
+  </div>
+  <div class="content col-full text-center tl-promotion">
+    <h4>
+      {{ settings.collection_promotion }}
+    </h4>
+    <a href="{{ settings.collection_promotion_url }}" class="tl-btn tl-btn-white-outline">
+      {{settings.collection_promotion_button}}
+    </a>
+  </div>
+</div>

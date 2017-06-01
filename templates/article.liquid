@@ -38,17 +38,17 @@
   <!-- /the article itself -->
 
   <!-- pagination (for now) -->
-  <div class="row">
+  <div class="row row-tl-bump">
     {% if blog.next_article or blog.previous_article %}
       {% if blog.previous_article %}
-        <div class="col-half">
+        <div class="sm-col-half">
           <a href="{{ blog.previous_article }}" class="btn btn--secondary btn--small uppercase">
             &larr; {{ 'blogs.article.older_post' | t }}
           </a>
         </div>
       {% endif %}
       {% if blog.next_article %}
-        <div class="col-half" style="text-align:right;">
+        <div class="sm-col-half" style="text-align:right;">
           <a href="{{ blog.next_article }}" class="btn btn--secondary btn--small uppercase">
             {{ 'blogs.article.newer_post' | t }} &rarr;
           </a>
@@ -61,46 +61,74 @@
 </article>
 
 <div class="row row-fullwidth tl-hero-featured-row">
-  <!-- todo:blog page featured collections -->
-  {% for collection in collections limit:3 %}
-  <a href="{{ collection.url }}">
+  <a href="{{ collections[settings.featured_small_1_link].url }}">
     <div class="col-third tl-box-container">
-      <div class="tl-collection-box fadein-1" style="background-image:url('{{ collection | img_url: 'large' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+      <div class="tl-collection-box fadein-1" style="background-image:url('{{ settings.featured_small_1_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
         <div class="tl-box-cover">
         </div>
         <h1 class="tl-box-name">
-           {{ collection.title }}
+           {{ settings.featured_small_1_title }}
         </h1>
       </div>
     </div>
   </a>
-  {% endfor %}
-  <!-- /todo:blog page featured -->
+  <a href="{{ collections[settings.featured_small_2_link].url }}">
+    <div class="col-third tl-box-container">
+      <div class="tl-collection-box fadein-1" style="background-image:url('{{ settings.featured_small_2_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+        <div class="tl-box-cover">
+        </div>
+        <h1 class="tl-box-name">
+           {{ settings.featured_small_2_title }}
+        </h1>
+      </div>
+    </div>
+  </a>
+  <a href="{{ collections[settings.featured_small_3_link].url }}">
+    <div class="col-third tl-box-container">
+      <div class="tl-collection-box fadein-1" style="background-image:url('{{ settings.featured_small_3_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+        <div class="tl-box-cover">
+        </div>
+        <h1 class="tl-box-name">
+           {{ settings.featured_small_3_title }}
+        </h1>
+      </div>
+    </div>
+  </a>
+  <a href="{{ settings.featured_1_link }}">
+    <div class="col-half tl-box-container">
+      <div class="tl-collection-box fadein-2" style="background-image:url('{{ settings.featured_1_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+        <div class="tl-box-cover">
+        </div>
+        <h1 class="tl-box-name">
+          {{ settings.featured_1_title }}
+        </h1>
+      </div>
+    </div>
+  </a>
+  <a href="{{ settings.featured_2_link }}">
+    <div class="col-half tl-box-container">
+      <div class="tl-collection-box fadein-3" style="background-image:url('{{ settings.featured_2_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+        <div class="tl-box-cover">
+        </div>
+        <h1 class="tl-box-name">
+          {{ settings.featured_2_title }}
+        </h1>
+      </div>
+    </div>
+  </a>
+</div>
 
-  <!-- todo:blog page featured boxes -->
-  <a href="#">
-    <div class="col-half tl-box-container">
-      <div class="tl-collection-box fadein-2" style="background-image:url('{{ 'featured-1.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
-        <div class="tl-box-cover">
-        </div>
-        <h1 class="tl-box-name">
-          Featured 1
-        </h1>
-      </div>
-    </div>
-  </a>
-  <a href="#">
-    <div class="col-half tl-box-container">
-      <div class="tl-collection-box fadein-3" style="background-image:url('{{ 'featured-2.jpg' | asset_url }}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
-        <div class="tl-box-cover">
-        </div>
-        <h1 class="tl-box-name">
-          Featured 2
-        </h1>
-      </div>
-    </div>
-  </a>
-  <!-- /todo:blog page featured boxes -->
+<div class="row row-fullwidth row-tl-bump-2x tl-promotion" style="background-image:url('{{ settings.featured_promotion_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;">
+  <div class="tl-promo-overlay" style="background-color:{{ settings.featured_promotion_color }};">
+  </div>
+  <div class="content col-full text-center tl-promotion">
+    <h4>
+      {{ settings.featured_promotion }}
+    </h4>
+    <a href="{{ settings.featured_promotion_url }}" class="tl-btn tl-btn-white-outline">
+      {{settings.featured_promotion_button}}
+    </a>
+  </div>
 </div>
 
 <!-- todo:subscribe form -->

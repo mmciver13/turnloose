@@ -48,3 +48,16 @@
   </a>
   {% endfor %}
 </div>
+
+<div class="row row-fullwidth row-tl-bump-2x tl-promotion" style="background-image:url('{{ settings.featured_promotion_img | img_url: '1024x1024' | format: 'jpg' }}');background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;">
+  <div class="tl-promo-overlay" style="background-color:{{ settings.featured_promotion_color }};">
+  </div>
+  <div class="content col-full text-center tl-promotion">
+    <h4>
+      {{ settings.featured_promotion }}
+    </h4>
+    <a href="{{ settings.featured_promotion_url }}" class="tl-btn tl-btn-white-outline">
+      {{settings.featured_promotion_button}}
+    </a>
+  </div>
+</div>

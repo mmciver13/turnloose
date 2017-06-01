@@ -111,6 +111,9 @@ body {
    width:100%;
    max-width:$max-width;
    margin:0 auto;
+   img {
+     max-width:100%;
+   }
    &:after {
      content: "";
      display: table;
@@ -186,7 +189,18 @@ body {
    padding-bottom:$sz-base*6;
  }
 
-
+.row-neg {
+  overflow:visible;
+  position:relative;
+  z-index:200;
+  img {
+    max-width:85%;
+    position:absolute;
+    top:-50px;
+    left:50%;
+    transform:translateX(-50%);
+  }
+}
  // ____________________
  // columns
  // ____________________
@@ -212,6 +226,12 @@ body {
  }
 
  .col-half {
+   width:$col-half;
+ }
+
+ .sm-col-half {
+   float:left;
+   position:relative;
    width:$col-half;
  }
 
@@ -350,6 +370,14 @@ body {
      right:0;
      bottom:0;
      opacity:{{ settings.featured_promotion_overlay }}*.01;
+   }
+   .tl-blog-promo-overlay {
+     position:absolute;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     opacity:{{ settings.collection_promotion_overlay }}*.01;
    }
  }
 
@@ -784,6 +812,27 @@ $card-height:275px;
     margin-left: 0 auto;
   }
 }
+
+// ____________________
+// responsive
+// ____________________
+
+.hide-sm {
+  @media (max-width:676px) {
+    display:none;
+  }
+}
+.hide-md {
+  @media (max-width:1024px) {
+    display:none;
+  }
+}
+.hide-lg {
+  @media (max-width:1280px) {
+    display:none;
+  }
+}
+
 
 // ###################################
 // overrides (sorry mom)
