@@ -244,6 +244,40 @@
     ]
   },
   {
+    "name": "TL About Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Background Images"
+      },
+      {
+        "type": "image_picker",
+        "id": "about_img_1",
+        "label": "Section 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "about_img_2",
+        "label": "Section 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "about_img_3",
+        "label": "Section 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "about_img_4",
+        "label": "Section 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "about_img_5",
+        "label": "Section 4"
+      }
+    ]
+  },
+  {
     "name": "Color",
     "settings": [
       {
