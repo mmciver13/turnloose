@@ -278,6 +278,46 @@
     ]
   },
   {
+    "name": "TL Blog",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Background Images"
+      },
+      {
+        "type": "image_picker",
+        "id": "tl_blog_img",
+        "label": "Blog Image"
+      },
+      {
+        "type": "text",
+        "id": "tl_blog_hero",
+        "label": "Hero Text",
+        "default": "This is our mantra"
+      },
+      {
+        "type": "text",
+        "id": "tl_blog_subhero",
+        "label": "Subhero text",
+        "default": "This is what moves us"
+      }
+    ]
+  },
+  {
+    "name": "TL Store",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Background Images"
+      },
+      {
+        "type": "image_picker",
+        "id": "tl_store_img",
+        "label": "Store Image"
+      }
+    ]
+  },
+  {
     "name": "Color",
     "settings": [
       {

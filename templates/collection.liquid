@@ -1,4 +1,4 @@
-<header class="row row-fullwidth tl-hero fadein-1" style="background-image:url('{% if collection.handle != 'all' %}{{ collection.image | img_url: '2048x2048' }}{% else %} {{ "product-head.JPG" | asset_url }}{% endif %}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+<header class="row row-fullwidth tl-hero fadein-1" style="background-image:url('{% if collection.handle != 'all' %}{{ collection.image | img_url: '2048x2048' }}{% else %} {{ settings.tl_store_img | img_url: '1024x1024' | format: 'jpg' }}{% endif %}');background-repeat:no-repeat;background-size:cover;background-position:center center;">
   <div class="tl-hero-cover">
   </div>
   <div class="tl-down-arrow">
@@ -34,7 +34,8 @@
 <div class="row row-fullwidth tl-products-row row-tl-bump">
   <div class="col-full content">
     <h2 class="tl-subhead">{{ collection.title }}</h2>
-    <div class="grid-uniform tl-three-quarter-width">
+    <div class="grid-uniform tl-three-quarter-width tl-grid-flex">
+      <!-- todo: single product view on mobile scroll -->
       {% assign grid_width_large = {{settings.global_grid_width_large}} %}
       {% assign grid_width_medium = {{settings.global_grid_width_medium}} %}
       {% assign grid_width_small = {{settings.global_grid_width_small}} %}
@@ -62,7 +63,7 @@
 <!-- single collection page -->
 <div class="row row-fullwidth tl-products-row row-tl-bump">
   <div class="col-full content">
-    <div class="grid-uniform tl-three-quarter-width">
+    <div class="grid-uniform tl-three-quarter-width tl-grid-flex">
       {% assign grid_width_large = {{settings.global_grid_width_large}} %}
       {% assign grid_width_medium = {{settings.global_grid_width_medium}} %}
       {% assign grid_width_small = {{settings.global_grid_width_small}} %}

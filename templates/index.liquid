@@ -56,7 +56,7 @@
     </a>
   </div>
 
-  <div class="row row-fullwidth text-center row-neg">
+  <div class="row row-fullwidth text-center row-tl-bump">
     <img src="{{ 'ambition-moves.svg' | asset_url }}" />
   </div>
 
@@ -66,7 +66,7 @@
 
       <div class="homepage-collection {{ settings.homepage_collection_color }}">
         <div class="wrapper">
-          <div class="grid-uniform tl-grid tl-hide-last">
+          <div class="grid-uniform tl-grid tl-grid-flex tl-hide-last">
             {% for product in collections[settings.featured_collection_home].products limit: 4 %}
               {% include 'product-grid-item' %}
             {% endfor %}
