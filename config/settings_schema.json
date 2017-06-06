@@ -188,7 +188,7 @@
       {
         "type": "range",
         "min": 0,
-        "max": 100,
+        "max": 99,
         "step": 1,
         "default": 50,
         "id": "featured_promotion_overlay",
@@ -235,7 +235,7 @@
       {
         "type": "range",
         "min": 0,
-        "max": 100,
+        "max": 99,
         "step": 1,
         "default": 50,
         "id": "collection_promotion_overlay",

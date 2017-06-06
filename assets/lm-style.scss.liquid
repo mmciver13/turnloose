@@ -518,6 +518,13 @@ $hero-size: 60vh;
    min-height:$hero-size;
    color:$clr-white;
    position:relative;
+   overflow:hidden;
+   height:auto;
+   @media (max-width:676px) {
+     .tl-hero-bump-sm {
+        min-height:80vh;
+     }
+   }
    img {
      max-width:100%;
    }
@@ -537,6 +544,10 @@ $hero-size: 60vh;
        line-height:($sz-font-base*3)+5px;
        text-transform:uppercase;
        margin:0;
+       @media (max-width:676px) {
+         font-size:$sz-font-base*2;
+         line-height:($sz-font-base*2)+5px;
+       }
      }
      .tl-hero-subhead {
        font-size:$sz-font-base;
@@ -562,8 +573,11 @@ $hero-size: 60vh;
  }
 
  .tl-product-hero {
-   padding-top:$sz-base;
+   padding-top:45px;
    background-color:$clr-white;
+   @media (max-width:676px) {
+     height:60vh;
+   }
    img {
     max-width: 100vw;
     height:auto;
@@ -704,6 +718,12 @@ $card-height:275px;
 
 .tl-grid {
   margin:0;
+}
+
+.tl-cart-grid {
+  .grid__item {
+    padding:0;
+  }
 }
 
 .tl-grid-flex {
